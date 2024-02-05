@@ -12,6 +12,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #0f0f0f;
+
 }
 
 /* Corrigir diferenças de margens e paddings em elementos padrão */
@@ -180,11 +181,14 @@ a {
 .inicio {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centralizar verticalmente */
-    align-items: center; /* Centralizar horizontalmente */
+    justify-content: center;
+    /* Centralizar verticalmente */
+    align-items: center;
+    /* Centralizar horizontalmente */
     text-align: center;
     padding: 20px;
-    height: 100vh; /* Ocupar 100% da altura da tela */
+    height: 100vh;
+    /* Ocupar 100% da altura da tela */
 }
 
 .inicio h1 {
@@ -195,13 +199,198 @@ a {
 }
 
 .inicio p {
-    color: rgba(88, 234, 217, 0.32); /* Cor #58EAD9 com 32 de transparência */
+    color: rgba(88, 234, 217, 0.32);
+    /* Cor #58EAD9 com 32 de transparência */
     margin-top: 10vh;
     opacity: 1;
     width: 30%;
 }
 
-/* Adicione outros estilos conforme necessário */
+
+
+/* sobre */
+
+
+/* sobre */
+.sobre {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.textos {
+    width: 45%;
+    float: left;
+    margin-top: 10vh;
+    margin-left: 5%;
+}
+
+.textos h4 {
+    color: #33FFE6;
+    size: 0.3em;
+}
+
+.textos h2 {
+    margin-top: 2vh;
+}
+
+.textos p {
+    margin-top: 2vh;
+}
+
+.textos button {
+    margin-top: 8vh;
+    background-color: rgba(88, 234, 217, 0);
+    border-radius: 20px;
+    border-color: #33FFE6;
+    padding: 1px 30px;
+}
+
+.textos img {
+    margin-top: 15vh;
+    width: 100%;
+}
+
+.lua {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.lua img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Serviços */
+.servicos {
+    text-align: center;
+}
+
+.servicos h2 {
+    color: #ffffff;
+}
+
+.servicos h3 {
+    color: #58EAD9;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2vh 10%;
+}
+
+.card {
+    width: 48%;
+    height: 2%;
+    background-color: #000000;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    padding-left: 100px;
+}
+
+.card h4 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Adaptação para telas menores */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.equipe {
+    background: url(./img/fotomidiaregener.jpeg) center/cover;
+    height: 80vh;
+
+
+
+}
+
+
+.duvidas {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pergunta {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2vh;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.duvidas p {
+    visibility: hidden;
+}
+
+.pergunta:hover {
+    height: 4vh; /* Alteração para 4vh ao passar o mouse */
+    margin-bottom: 20px;
+
+}
+
+.pergunta:hover p{
+    visibility: visible;
+
+}
+
+.pergunta p {
+    display: none; /* Oculta o parágrafo inicialmente */
+}
+
+.pergunta.expandido p {
+    display: block; /* Mostra o parágrafo quando a pergunta está expandida */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* footer */
