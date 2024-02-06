@@ -1,9 +1,404 @@
+/* Reset de estilos para igualar propriedades em diferentes navegadores */
 * {
     margin: 0;
     padding: 0;
-    background-color: #1c1c1c;
+    box-sizing: border-box;
+    color: #ffffff;
+
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top:  110px;
+  }
+
+/* Adicionar estilos específicos conforme necessário */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0f0f0f;
+
 }
 
-body {
+/* Corrigir diferenças de margens e paddings em elementos padrão */
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remover sublinhado padrão de links e definir cor */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Adicionar estilos para tornar as imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adicionar estilos para a tag de lista */
+ul, ol {
+    list-style: none;
+}
+
+/* Adicionar outras redefinições conforme necessário */
+
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Remover sublinhado de links que contêm apenas números */
+a[href^="tel:"] {
+    text-decoration: none;
+}
+
+/* section padrão */
+section {
+    height: 100vh;
     width: 100%;
+}
+
+
+/* whatssap   */
+.whatsapp {
+    position: fixed;
+    top: 88vh;
+    left: 95%;
+    z-index: 999;
+    background: none;
+}
+
+.divwhatsapp {
+    display: flex;
+    /* Adicionando flexbox para alinhar itens lado a lado */
+    align-items: center;
+    /* Centralizando verticalmente os itens */
+    background: #40c351;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 100px;
+    transition: width 0.3s ease;
+    /* Alterando a propriedade da transição para width */
+}
+
+.divwhatsapp img {
+    display: block;
+    /* Remova o display: flex */
+    margin: 0 auto;
+    /* Adicione esta linha para centralizar horizontalmente */
+    max-width: 100%;
+    /* Adicione esta linha para garantir que a imagem não ultrapasse a largura da div */
+}
+
+.divwhatsapp p {
+    visibility: hidden;
+    margin-left: 10px;
+    /* Ajuste o espaçamento conforme necessário */
+    color: #ffffff;
+    text-decoration: none;
+    text-underline-offset: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.divwhatsapp:hover {
+    background: #40c351;
+    width: 140px;
+    height: 7vh;
+    border-radius: 100px;
+    margin-left: -80px;
+    /* Ajustando o margin-left para abrir para a esquerda */
+    transition: 1s;
+}
+
+.divwhatsapp:hover p {
+    visibility: visible;
+
+    list-style: none;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .whatsapp {
+        left: 94%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .whatsapp {
+        left: 93%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .whatsapp {
+        left: 92%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .whatsapp {
+        left: 92%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .whatsapp {
+        left: 91%;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .whatsapp {
+        left: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .whatsapp {
+        left: 88%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .whatsapp {
+        left: 84%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .whatsapp {
+        left: 82%;
+    }
+}
+
+
+/* Estilos para centralizar texto e definir cores */
+.inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centralizar verticalmente */
+    align-items: center;
+    /* Centralizar horizontalmente */
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    /* Ocupar 100% da altura da tela */
+}
+
+.inicio h1 {
+    color: #58EAD9;
+    opacity: 1;
+    width: 60%;
+    font-size: 2em;
+}
+
+.inicio p {
+    color: rgba(88, 234, 217, 0.32);
+    /* Cor #58EAD9 com 32 de transparência */
+    margin-top: 10vh;
+    opacity: 1;
+    width: 30%;
+}
+
+
+
+/* sobre */
+
+
+/* sobre */
+.sobre {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.textos {
+    width: 45%;
+    float: left;
+    margin-top: 10vh;
+    margin-left: 5%;
+}
+
+.textos h4 {
+    color: #33FFE6;
+    size: 0.3em;
+}
+
+.textos h2 {
+    margin-top: 2vh;
+}
+
+.textos p {
+    margin-top: 2vh;
+}
+
+.textos button {
+    margin-top: 8vh;
+    background-color: rgba(88, 234, 217, 0);
+    border-radius: 20px;
+    border-color: #33FFE6;
+    padding: 1px 30px;
+}
+
+.textos img {
+    margin-top: 15vh;
+    width: 100%;
+}
+
+.lua {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.lua img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Serviços */
+.servicos {
+    text-align: center;
+}
+
+.servicos h2 {
+    color: #ffffff;
+}
+
+.servicos h3 {
+    color: #58EAD9;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 2vh 10%;
+}
+
+.card {
+    width: 48%;
+    height: 2%;
+    background-color: #000000;
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    padding-left: 100px;
+}
+
+.card h4 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Adaptação para telas menores */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.equipe {
+    background: url(./img/fotomidiaregener.jpeg) center/cover;
+    height: 80vh;
+
+
+
+}
+
+
+.duvidas {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pergunta {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2vh;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.duvidas p {
+    visibility: hidden;
+}
+
+.pergunta:hover {
+    height: 4vh; /* Alteração para 4vh ao passar o mouse */
+    margin-bottom: 20px;
+
+}
+
+.pergunta:hover p{
+    visibility: visible;
+
+}
+
+.pergunta p {
+    display: none; /* Oculta o parágrafo inicialmente */
+}
+
+.pergunta.expandido p {
+    display: block; /* Mostra o parágrafo quando a pergunta está expandida */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 40vh;
 }
