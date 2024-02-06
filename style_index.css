@@ -7,6 +7,12 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top:  110px;
+  }
+
+
 /* Adicionar estilos específicos conforme necessário */
 body {
     font-family: Arial, sans-serif;
