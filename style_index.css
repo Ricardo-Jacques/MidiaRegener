@@ -62,123 +62,6 @@ section {
 }
 
 
-/* whatssap   */
-.whatsapp {
-    position: fixed;
-    top: 88vh;
-    left: 95%;
-    z-index: 999;
-    background: none;
-}
-
-.divwhatsapp {
-    display: flex;
-    /* Adicionando flexbox para alinhar itens lado a lado */
-    align-items: center;
-    /* Centralizando verticalmente os itens */
-    background: #40c351;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    border-radius: 100px;
-    transition: width 0.3s ease;
-    /* Alterando a propriedade da transição para width */
-}
-
-.divwhatsapp img {
-    display: block;
-    /* Remova o display: flex */
-    margin: 0 auto;
-    /* Adicione esta linha para centralizar horizontalmente */
-    max-width: 100%;
-    /* Adicione esta linha para garantir que a imagem não ultrapasse a largura da div */
-}
-
-.divwhatsapp p {
-    visibility: hidden;
-    margin-left: 10px;
-    /* Ajuste o espaçamento conforme necessário */
-    color: #ffffff;
-    text-decoration: none;
-    text-underline-offset: none;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-.divwhatsapp:hover {
-    background: #40c351;
-    width: 140px;
-    height: 7vh;
-    border-radius: 100px;
-    margin-left: -80px;
-    /* Ajustando o margin-left para abrir para a esquerda */
-    transition: 1s;
-}
-
-.divwhatsapp:hover p {
-    visibility: visible;
-
-    list-style: none;
-}
-
-
-@media screen and (max-width: 1400px) {
-    .whatsapp {
-        left: 94%;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .whatsapp {
-        left: 93%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .whatsapp {
-        left: 92%;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .whatsapp {
-        left: 92%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .whatsapp {
-        left: 91%;
-    }
-}
-
-
-@media screen and (max-width: 700px) {
-    .whatsapp {
-        left: 90%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .whatsapp {
-        left: 88%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .whatsapp {
-        left: 84%;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .whatsapp {
-        left: 82%;
-    }
-}
 
 
 /* Estilos para centralizar texto e definir cores */
@@ -209,6 +92,21 @@ a {
     opacity: 1;
     width: 30%;
 }
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+    .inicio {
+        height: 90vh;
+    }
+    .inicio h1 {
+        font-size: 1.2em; /* Tamanho de fonte menor para telas menores */
+        width: 60%; /* Reduz a largura do texto */
+    }
+
+    .inicio p {
+        width: 60%; /* Reduz a largura do parágrafo */
+        font-size: 0.7em;
+    }
+}
 
 
 
@@ -220,6 +118,7 @@ a {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    display: block;
 
 }
 
@@ -270,6 +169,40 @@ a {
     height: auto;
 }
 
+@media screen and (max-width: 768px) {
+    .sobre {
+        height: 6%;
+    }
+    .textos {
+        width: 80%;
+        
+    }
+
+    .textos h4 {
+        color: #33FFE6;
+        size: 0.2em;
+    }
+    
+    .textos h2 {
+        margin-top: 1vh;
+    }
+    
+    .textos p {
+        margin-top: 2vh;
+        font-size: 0.5em;
+    }
+
+    .lua {
+        visibility: hidden;
+    }
+
+    .textos img {
+        visibility: hidden;
+    }
+
+}
+
+
 
 
 /* Serviços */
@@ -279,33 +212,40 @@ a {
 
 .servicos h2 {
     color: #ffffff;
+    font-size: 2em; /* Tamanho de fonte maior */
+    margin-bottom: 20px; /* Espaçamento inferior aumentado */
+    text-align: center; /* Centraliza o texto */
+    
 }
 
 .servicos h3 {
     color: #58EAD9;
+    font-size: 1.5em; /* Tamanho de fonte maior */
+    margin-bottom: 15px; /* Espaçamento inferior aumentado */
+    text-align: center; /* Centraliza o texto */
 }
+
 
 .cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 2vh 10%;
+    margin: 2vh 5%; /* Margens laterais ajustadas */
 }
 
 .card {
     width: 48%;
-    height: 2%;
     background-color: #000000;
     color: #ffffff;
     box-sizing: border-box;
     padding: 20px;
     margin: 10px;
-    padding-left: 100px;
 }
 
 .card h4 {
     text-align: left;
     margin-bottom: 10px;
+    font-size: 1.2em; /* Tamanho de fonte maior */
 }
 
 .hidden {
@@ -316,6 +256,27 @@ a {
 @media screen and (max-width: 768px) {
     .card {
         width: 100%;
+
+    }
+    .servicos{
+        height: 250vh;
+        text-align: center;
+    }
+
+    .servicos h2 {
+        font-size: 1.5em; 
+        margin-bottom: 15px; 
+        text-align: center;
+    }
+
+    .servicos h3 {
+        font-size: 1.2em; /* Tamanho de fonte menor para telas menores */
+        margin-bottom: 10px; /* Espaçamento inferior ajustado */
+        text-align: center;
+    }
+
+    .card h4 {
+        font-size: 1em; /* Tamanho de fonte menor para telas menores */
     }
 }
 
@@ -331,6 +292,7 @@ a {
 .duvidas {
     max-width: 800px;
     margin: 0 auto;
+    height: 100vh;
 }
 
 .pergunta {
@@ -366,7 +328,16 @@ a {
 .pergunta.expandido p {
     display: block; /* Mostra o parágrafo quando a pergunta está expandida */
 }
+@media screen and (max-width: 768px) {
+    .duvidas {
+        height: 300vh;
+    }
 
+    .equipe{
+        margin-top: 10px;
+    }
+    
+}
 
 
 
