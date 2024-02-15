@@ -43,9 +43,9 @@ footer {
     display: block; /* Mostra o parágrafo quando a pergunta está expandida */
 }
 
-.img_footer {
-
-    width: 100%;
+.foto_footer {
+    background-image: url(./img/footer.png) center/cover;
+    height: 80vh;
 }
 
 
