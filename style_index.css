@@ -211,9 +211,13 @@ a {
     margin-top: 10vh;
     opacity: 1;
     width: 30%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-
+.inicio:hover p {
+    opacity: 1;
+}
 
 /* sobre */
 
