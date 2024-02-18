@@ -235,6 +235,20 @@ a {
     float: left;
     margin-top: 10vh;
     margin-left: 5%;
+    overflow: hidden;
+}
+
+.slide_text {
+    animation: slide-in 2s ease-in-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .textos h4 {
@@ -270,6 +284,21 @@ a {
     justify-content: center;
     align-items: center;
     float: right;
+    overflow: hidden;
+}
+
+.slide_lua {
+    animation: slade-in 2s ease-in-out;
+}
+
+@keyframes slade-in {
+    from {
+        transform: translateX(+100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 .lua img {
