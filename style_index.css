@@ -67,9 +67,11 @@ section {
 .inicio {
     display: flex;
     flex-direction: column;
+    /* centralizar verticalmente */
+    justify-content: center;
     /* Centralizar horizontalmente */
     align-items: center;
-    height: auto;
+    height: 100vh;
     /* Ocupar 100% da altura da tela */
 }
 
@@ -78,7 +80,6 @@ section {
     opacity: 1;
     width: 60%;
     font-size: 2em;
-    margin-top: 20vh;
     text-align: center;
 }
 
