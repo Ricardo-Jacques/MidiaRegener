@@ -79,6 +79,7 @@ section {
     width: 60%;
     font-size: 2em;
     margin-top: 20vh;
+    text-align: center;
 }
 
 .inicio p {
@@ -102,13 +103,15 @@ section {
     }
 }
 
-@media(max-width: 640px) {
+@media(max-width: 680px) {
     .inicio h1 {
         font-size: 1.3em;
+        width: 70%;
     }
 
     .inicio p {
-        width: 60%;
+        width: 70%;
+        text-align: center;
     }
 }
 
