@@ -202,6 +202,31 @@ section {
     height: auto;
 }
 
+/* responsividade da seção .sobre para telas menores */
+@media (max-width: 680px) {
+    .sobre {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .textos {
+        width: 90%;
+    }
+
+    .textos button {
+        margin-top: 3vh
+    }
+
+    .textos img {
+        margin-top: 2vh;
+        width: 80%;
+    }
+
+    .lua {
+        width: 90%;
+    }
+}
 
 
 /* Serviços */
