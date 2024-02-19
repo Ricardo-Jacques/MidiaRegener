@@ -239,7 +239,7 @@ a {
 }
 
 .slide_text {
-    animation: slide-in 2s ease-in-out;
+    animation: slide-in 3s ease-in-out;
 }
 
 @keyframes slide-in {
@@ -288,7 +288,7 @@ a {
 }
 
 .slide_lua {
-    animation: slade-in 2s ease-in-out;
+    animation: slade-in 3s ease-in-out;
 }
 
 @keyframes slade-in {
