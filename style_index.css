@@ -57,126 +57,6 @@ section {
     width: 100%;
 }
 
-
-/* whatssap   */
-.whatsapp {
-    position: fixed;
-    top: 88vh;
-    left: 95%;
-    z-index: 999;
-    background: none;
-}
-
-.divwhatsapp {
-    display: flex;
-    /* Adicionando flexbox para alinhar itens lado a lado */
-    align-items: center;
-    /* Centralizando verticalmente os itens */
-    background: #40c351;
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    border-radius: 100px;
-    transition: width 0.3s ease;
-    /* Alterando a propriedade da transição para width */
-}
-
-.divwhatsapp img {
-    display: block;
-    /* Remova o display: flex */
-    margin: 0 auto;
-    /* Adicione esta linha para centralizar horizontalmente */
-    max-width: 100%;
-    /* Adicione esta linha para garantir que a imagem não ultrapasse a largura da div */
-}
-
-.divwhatsapp p {
-    visibility: hidden;
-    margin-left: 10px;
-    /* Ajuste o espaçamento conforme necessário */
-    color: #ffffff;
-    text-decoration: none;
-    text-underline-offset: none;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-.divwhatsapp:hover {
-    background: #40c351;
-    width: 140px;
-    height: 7vh;
-    border-radius: 100px;
-    margin-left: -80px;
-    /* Ajustando o margin-left para abrir para a esquerda */
-    transition: 1s;
-}
-
-.divwhatsapp:hover p {
-    visibility: visible;
-
-    list-style: none;
-}
-
-
-@media screen and (max-width: 1400px) {
-    .whatsapp {
-        left: 94%;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .whatsapp {
-        left: 93%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .whatsapp {
-        left: 92%;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .whatsapp {
-        left: 92%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .whatsapp {
-        left: 91%;
-    }
-}
-
-
-@media screen and (max-width: 700px) {
-    .whatsapp {
-        left: 90%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .whatsapp {
-        left: 88%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .whatsapp {
-        left: 84%;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .whatsapp {
-        left: 82%;
-    }
-}
-
-
 /* Estilos para centralizar texto e definir cores */
 .inicio {
     display: flex;
@@ -208,7 +88,22 @@ a {
 
 
 
-/* sobre */
+/* responsividade da seção .inicio para telas menores */
+@media(max-width: 900px) {
+    .inicio h1 {
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width: 640px) {
+    .inicio h1 {
+        font-size: 1.3em;
+    }
+
+    .inicio p {
+        width: 60%;
+    }
+}
 
 
 /* sobre */
@@ -226,13 +121,14 @@ a {
     margin-left: 5%;
 }
 
-.textos h4 {
+.textos h2 {
     color: #33FFE6;
-    size: 0.3em;
+    font-size: 1.7em;
 }
 
-.textos h2 {
+.textos h3 {
     margin-top: 2vh;
+    font-size: 1.4em;
 }
 
 .textos p {
@@ -362,34 +258,6 @@ a {
 .pergunta.expandido p {
     display: block; /* Mostra o parágrafo quando a pergunta está expandida */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
