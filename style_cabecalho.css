@@ -110,6 +110,7 @@ a:hover::after {
 
     a.mobile {
         opacity: 1;
+        text-align: center;
     }
 
 }
