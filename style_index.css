@@ -5,7 +5,14 @@
     box-sizing: border-box;
     color: #ffffff;
 
+
 }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top:  110px;
+  }
+
 
 /* Adicionar estilos específicos conforme necessário */
 body {
@@ -84,9 +91,13 @@ section {
     margin-top: 10vh;
     opacity: 1;
     width: 30%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-
+.inicio:hover p {
+    opacity: 1;
+}
 
 /* responsividade da seção .inicio para telas menores */
 @media(max-width: 900px) {
@@ -119,6 +130,20 @@ section {
     float: left;
     margin-top: 10vh;
     margin-left: 5%;
+    overflow: hidden;
+}
+
+.slide_text {
+    animation: slide-in 2s ease-in-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .textos h2 {
@@ -155,6 +180,21 @@ section {
     justify-content: center;
     align-items: center;
     float: right;
+    overflow: hidden;
+}
+
+.slide_lua {
+    animation: slade-in 2s ease-in-out;
+}
+
+@keyframes slade-in {
+    from {
+        transform: translateX(+100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 .lua img {

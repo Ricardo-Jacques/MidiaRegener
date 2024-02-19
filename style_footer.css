@@ -1,3 +1,4 @@
+
 footer {
     margin-top: 30vh;
 }
@@ -15,40 +16,16 @@ footer {
     color: #ffffff;
     padding: 2vh;
     box-sizing: border-box;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: background-color 2s ease-in-out;
-}
-.duvidas p {
-    visibility: hidden;
-}
-
-.pergunta:hover {
-    height: 20vh; /* Alteração para 4vh ao passar o mouse */
     margin-bottom: 20px;
-
+    cursor: pointer;
 }
 
-.pergunta:hover p{
-    visibility: visible;
 
-}
 
-.pergunta p {
-    display: none; /* Oculta o parágrafo inicialmente */
-}
-
-.pergunta.expandido p {
-    display: block; /* Mostra o parágrafo quando a pergunta está expandida */
-}
-
-.img_footer {
-
+footer img {
     width: 100%;
 }
-
-
-
+ 
 
 
 
