@@ -1,33 +1,62 @@
 
+
 footer {
-    margin-top: 30vh;
+    margin-top: 10vh;
+    
 }
 .duvidas {
-    max-width: 70%;
+    max-width: 800px;
     margin: 0 auto;
-    height: 50vh;
 }
 
 .pergunta {
     width: 80%;
     margin: 0 auto;
-    background-color: #1C1C1C;
-    border: 2px solid #e3e3e3;
+    background-color: #000000;
     color: #ffffff;
     padding: 2vh;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.pergunta:hover {
+    height: auto; /* Remova a altura fixa para permitir que ela se ajuste dinamicamente */
+    margin-bottom: 20px;
+}
+
+.pergunta p {
+    visibility: hidden;
+    display: none;
+}
+
+.pergunta:hover p {
+    visibility: visible;
+    display: block; /* Mude para "block" para que o parágrafo apareça */
+}
+
+
 
 
 
 footer img {
+    margin-top: -5vh;
     width: 100%;
+    margin-bottom: -10px;
+
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        height: 112vh;
+    }
+    footer img {
+        content: url('./img/Footer-min.png');
+        width: 100%;
+    }
 }
  
-
-
 
 
 

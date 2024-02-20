@@ -1,3 +1,4 @@
+
 menu_mobile = document.querySelector('.icone-menu');
 nav = document.getElementsByTagName('nav')[0];
 a = document.querySelectorAll(".link_cabecalho");
@@ -18,3 +19,4 @@ menu_mobile.addEventListener("click", function() {
         }
     }
 });
+
