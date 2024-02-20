@@ -5,11 +5,14 @@
     box-sizing: border-box;
     color: #ffffff;
 
+
 }
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top:  110px;
   }
+
 
 /* Adicionar estilos específicos conforme necessário */
 body {
@@ -57,23 +60,17 @@ a[href^="tel:"] {
 
 /* section padrão */
 section {
-    height: 100vh;
     width: 100%;
 }
-
-
-
 
 /* Estilos para centralizar texto e definir cores */
 .inicio {
     display: flex;
     flex-direction: column;
+    /* centralizar verticalmente */
     justify-content: center;
-    /* Centralizar verticalmente */
-    align-items: center;
     /* Centralizar horizontalmente */
-    text-align: center;
-    padding: 20px;
+    align-items: center;
     height: 100vh;
     /* Ocupar 100% da altura da tela */
 }
@@ -83,6 +80,7 @@ section {
     opacity: 1;
     width: 60%;
     font-size: 2em;
+    text-align: center;
 }
 
 .inicio p {
@@ -91,26 +89,32 @@ section {
     margin-top: 10vh;
     opacity: 1;
     width: 30%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
-/* Estilos para telas menores */
-@media screen and (max-width: 768px) {
-    .inicio {
-        height: 90vh;
-    }
+
+.inicio:hover p {
+    opacity: 1;
+}
+
+/* responsividade da seção .inicio para telas menores */
+@media(max-width: 900px) {
     .inicio h1 {
-        font-size: 1.2em; /* Tamanho de fonte menor para telas menores */
-        width: 60%; /* Reduz a largura do texto */
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width: 680px) {
+    .inicio h1 {
+        font-size: 1.3em;
+        width: 70%;
     }
 
     .inicio p {
-        width: 60%; /* Reduz a largura do parágrafo */
-        font-size: 0.7em;
+        width: 70%;
+        text-align: center;
     }
 }
-
-
-
-/* sobre */
 
 
 /* sobre */
@@ -118,7 +122,6 @@ section {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    display: block;
 
 }
 
@@ -127,15 +130,30 @@ section {
     float: left;
     margin-top: 10vh;
     margin-left: 5%;
+    overflow: hidden;
 }
 
-.textos h4 {
-    color: #33FFE6;
-    size: 0.3em;
+.slide_text {
+    animation: slide-in 3s ease-in-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .textos h2 {
+    color: #33FFE6;
+    font-size: 1.7em;
+}
+
+.textos h3 {
     margin-top: 2vh;
+    font-size: 1.4em;
 }
 
 .textos p {
@@ -162,6 +180,21 @@ section {
     justify-content: center;
     align-items: center;
     float: right;
+    overflow: hidden;
+}
+
+.slide_lua {
+    animation: slade-in 3s ease-in-out;
+}
+
+@keyframes slade-in {
+    from {
+        transform: translateX(+100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 .lua img {
@@ -169,40 +202,31 @@ section {
     height: auto;
 }
 
-@media screen and (max-width: 768px) {
+/* responsividade da seção .sobre para telas menores */
+@media (max-width: 680px) {
     .sobre {
-        height: 6%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
+
     .textos {
-        width: 80%;
-        
+        width: 90%;
     }
 
-    .textos h4 {
-        color: #33FFE6;
-        size: 0.2em;
-    }
-    
-    .textos h2 {
-        margin-top: 1vh;
-    }
-    
-    .textos p {
-        margin-top: 2vh;
-        font-size: 0.5em;
-    }
-
-    .lua {
-        visibility: hidden;
+    .textos button {
+        margin-top: 3vh
     }
 
     .textos img {
-        visibility: hidden;
+        margin-top: 2vh;
+        width: 80%;
     }
 
+    .lua {
+        width: 100%;
+    }
 }
-
-
 
 
 /* Serviços */
@@ -212,40 +236,33 @@ section {
 
 .servicos h2 {
     color: #ffffff;
-    font-size: 2em; /* Tamanho de fonte maior */
-    margin-bottom: 20px; /* Espaçamento inferior aumentado */
-    text-align: center; /* Centraliza o texto */
-    
 }
 
 .servicos h3 {
     color: #58EAD9;
-    font-size: 1.5em; /* Tamanho de fonte maior */
-    margin-bottom: 15px; /* Espaçamento inferior aumentado */
-    text-align: center; /* Centraliza o texto */
 }
-
 
 .cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 2vh 5%; /* Margens laterais ajustadas */
+    margin: 2vh 10%;
 }
 
 .card {
     width: 48%;
+    height: 2%;
     background-color: #000000;
     color: #ffffff;
     box-sizing: border-box;
     padding: 20px;
     margin: 10px;
+    padding-left: 100px;
 }
 
 .card h4 {
     text-align: left;
     margin-bottom: 10px;
-    font-size: 1.2em; /* Tamanho de fonte maior */
 }
 
 .hidden {
@@ -256,27 +273,6 @@ section {
 @media screen and (max-width: 768px) {
     .card {
         width: 100%;
-
-    }
-    .servicos{
-        height: 250vh;
-        text-align: center;
-    }
-
-    .servicos h2 {
-        font-size: 1.5em; 
-        margin-bottom: 15px; 
-        text-align: center;
-    }
-
-    .servicos h3 {
-        font-size: 1.2em; /* Tamanho de fonte menor para telas menores */
-        margin-bottom: 10px; /* Espaçamento inferior ajustado */
-        text-align: center;
-    }
-
-    .card h4 {
-        font-size: 1em; /* Tamanho de fonte menor para telas menores */
     }
 }
 
@@ -286,90 +282,4 @@ section {
 
 
 
-}
-
-
-.duvidas {
-    max-width: 800px;
-    margin: 0 auto;
-    height: 100vh;
-}
-
-.pergunta {
-    width: 80%;
-    margin: 0 auto;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 2vh;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.duvidas p {
-    visibility: hidden;
-}
-
-.pergunta:hover {
-    height: 4vh; /* Alteração para 4vh ao passar o mouse */
-    margin-bottom: 20px;
-
-}
-
-.pergunta:hover p{
-    visibility: visible;
-
-}
-
-.pergunta p {
-    display: none; /* Oculta o parágrafo inicialmente */
-}
-
-.pergunta.expandido p {
-    display: block; /* Mostra o parágrafo quando a pergunta está expandida */
-}
-@media screen and (max-width: 768px) {
-    .duvidas {
-        height: 300vh;
-    }
-
-    .equipe{
-        margin-top: 10px;
-    }
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* footer */
-footer {
-    width: 100%;
-    height: 40vh;
 }
