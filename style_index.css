@@ -96,6 +96,7 @@ section {
     width: 30%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+
 }
 
 .inicio:hover p {
@@ -114,6 +115,7 @@ section {
         font-size: 1.3em;
         width: 70%;
     }
+
 
     .inicio p {
         width: 70%;
@@ -312,52 +314,4 @@ section {
 
 
 
-}
-
-
-.duvidas {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.pergunta {
-    width: 80%;
-    margin: 0 auto;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 2vh;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.duvidas p {
-    visibility: hidden;
-}
-
-.pergunta:hover {
-    height: 4vh; /* Alteração para 4vh ao passar o mouse */
-    margin-bottom: 20px;
-
-}
-
-.pergunta:hover p{
-    visibility: visible;
-
-}
-
-.pergunta p {
-    display: none; /* Oculta o parágrafo inicialmente */
-}
-
-.pergunta.expandido p {
-    display: block; /* Mostra o parágrafo quando a pergunta está expandida */
-}
-
-
-
-/* footer */
-footer {
-    width: 100%;
-    height: 40vh;
 }
