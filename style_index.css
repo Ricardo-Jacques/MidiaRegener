@@ -285,8 +285,8 @@ section {
 }
 
 @Media screen and (max-width: 1130px) {
-    .cards {
-        width: 70%;
+    .card {
+        width: 47%;
     }
 }
 
