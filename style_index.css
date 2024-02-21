@@ -83,7 +83,7 @@ section {
 .inicio h1 {
     color: #58EAD9;
     opacity: 1;
-    width: 60%;
+    width: 55%;
     font-size: 2em;
     text-align: center;
 }
@@ -315,13 +315,4 @@ section {
     .cards {
         width: 100%;
     }
-}
-
-
-.equipe {
-    background: url(./img/fotomidiaregener.jpeg) center/cover;
-    height: 80vh;
-
-
-
 }
