@@ -22,6 +22,11 @@ body {
 
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Corrigir diferenças de margens e paddings em elementos padrão */
 h1, h2, h3, p {
     margin: 0;
@@ -232,6 +237,7 @@ section {
 /* Serviços */
 .servicos {
     text-align: center;
+    height: auto;
 }
 
 .servicos h2 {
@@ -257,7 +263,6 @@ section {
     box-sizing: border-box;
     padding: 20px;
     margin: 10px;
-    padding-left: 100px;
 }
 
 .card h4 {
@@ -269,12 +274,37 @@ section {
     visibility: hidden;
 }
 
-/* Adaptação para telas menores */
+/* responsividade da seção .serviços para telas menores */
+@media screen and (max-width: 1270px) {
+    .cards {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@Media screen and (max-width: 1130px) {
+    .cards {
+        width: 70%;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .card {
         width: 100%;
+        padding: 15px;
+    }
+
+    .card h4 {
+        text-align: center;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .cards {
+        width: 100%;
+    }
+}
+
 
 .equipe {
     background: url(./img/fotomidiaregener.jpeg) center/cover;
