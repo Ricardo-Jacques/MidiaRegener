@@ -273,6 +273,11 @@ section {
     transition: box-shadow 0.3s ease;
 }
 
+.card p {
+    width: 90%;
+    margin-left: 7%;
+    }
+
 .card:hover {
     box-shadow: 0 0 10px white;
 }
