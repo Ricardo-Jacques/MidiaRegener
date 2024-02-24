@@ -4,35 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midia Regener</title>
-    <link rel="stylesheet" href="./style_index.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>DriveUp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style_index.css">
     <link rel="stylesheet" href="style_cabecalho.css">
-    <link rel="stylesheet" href="style_footer.css">
-    <link rel="stylesheet" href="style_whatsapp.css">
+    <link rel="stylesheet" href="style_rodape.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,400;1,300&family=Quintessential&family=Titillium+Web:wght@300;400&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/Lgoo_DriveUp_32x10.png" type="image/x-icon">
 </head>
+
 <body>
     <header>
-        <img src="img/logo.png" alt="Logo Midia Regener">
+        <picture>
+            <source srcset="img/logo_driveup_branca100.png" media="(max-device-width: 480px)" />
+            <source srcset="img/DriveUp_Oficial120.webp" media="(max-width: 700px)" />
+            <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 850px)" />
+            <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">
+        </picture>
         <nav>
             <ul>
-                <li><a href="index.html" class="link_cabecalho">Início</a></li>
-                <li><a href="#sobre" class="link_cabecalho">Sobre</a></li>
-                <li><a href="#servicos" class="link_cabecalho">Serviços</a></li>
-                <li><a href="#portfolio" class="link_cabecalho">Portfólio</a></li>
+                <li><a id="pagina-inicio" href="index.html">Início</a></li>
+                <li><a id="pagina-corporativo" href="corporativo.html">Corporativo</a></li>
+                <li><a id="pagina-turismo" href="Turismo.html">Turismo</a></li>
+
+                <button class="idioma" onclick="menuIdiomas()">
+                    <ul class="caixa-bandeiras">
+                        <li class="li-bandeiras1">
+                            <picture>
+                                <source srcset="img/flag_en20.png" media="(max-width: 600px)" alt="bandeira EUA."/>
+                                <source srcset="img/flag_en25.png" media="(max-width: 850px)" alt="bandeira EUA."/>
+                                <img id="bandeira-eua" class="bandeira-eua" onclick="mudarIdioma('ingles')" src="img/flag_en35.png" alt="Bandeira EUA">
+                            </picture>
+                        </li>
+                        <li class="li-bandeiras">
+                            <picture>
+                                <source srcset="img/flag_br20.jpg" media="(max-width: 600px)" alt="Bandeira do Brasil."/>
+                                <source srcset="img/flag_br25.jpg" media="(max-width: 850px)" alt="Bandeira do Brasil."/>
+                                <img id="bandeira-brasil" class="escondido" onclick="mudarIdioma('portugues')" src="img/flag_br35.jpg" alt="Bandeira do Brasil.">
+                            </picture>
+                        </li>
+                        <li class="li-bandeiras">
+                            <picture>
+                                <source srcset="img/flag_esp20.png" media="(max-width: 600px)" alt="Bandeira da Espanha."/>
+                                <source srcset="img/flag_esp25.png" media="(max-width: 850px)" alt="Bandeira da Espanha."/>
+                                <img id="bandeira-espanha" class="escondido" onclick="mudarIdioma('espanhol')" src="img/flag_esp35.png" alt="Bandeira da Espanha.">
+                            </picture>
+                        </li>
+                    </ul>
+                </button>
             </ul>
         </nav>
-        <img class="icone-menu" src="img/menu_iconcinza.png" alt="Ícone do menu">
+        <img class="icone-menu" src="img/menu_icon.svg" alt="Ícone do menu">
     </header>
-
     <main>
-        <section class="inicio">
-            <h1>Seja parte do grupo de marcas que possuem clientes apaixonados e venda sem esforços. Vamos juntos
-                realizar?</h1>
-            <p>Midia Regener é especialista em ajudar pequenos e médios negócios a crescerem.
-            </p>
-
-        </section>
-        <aside class="whatsapp">
+        <section class="whatsapp">
             <a id="linkwhatsapp" href="https://bit.ly/47FHAut" target="_blank">
                 <div class="divwhatsapp">
 
@@ -43,103 +77,262 @@
                 </div>
             </a>
             </div>
+        </section>
+        
+        <section class="inicio">
+            <div class="carousel-container">
+                <div id="slide1" class="carousel-slide"></div>
+                <div id="slide2" class="carousel-slide"></div>
+                <div id="slide3" class="carousel-slide"></div>
+            </div>
 
-        </aside>
+            <button><a id="entre-em-contato-whats" href="https://bit.ly/47FHAut'" target="_blank">Entre em contato</a></button>
+        </section>
 
-        <section class="sobre" id="sobre">
+        <section class="somos">
             <div class="textos">
-                <h2>SOBRE NÓS</h2>
-                <h3>Potencializando histórias através do marketing</h3>
-                <p>Nosso foco é dar vida às narrativas por meio do marketing. Engajamos nosso negócio na missão de
-                    contar a
-                    história da sua marca. Embora possa parecer simples, acreditamos que o marketing contemporâneo vai
-                    além
-                    das abordagens tradicionais. Nossas estratégias visam não apenas capturar a atenção, mas também
-                    despertar a paixão genuína das pessoas pela sua marca. Somos especialistas nesse processo. Que tal
-                    embarcar nessa jornada conosco? iniciar essa jornada conosco?</p>
-                <button>Realizar agora!</button>
-                <img src="./img/azul.png" alt="">
-                </div>
+
+                <h2 id="somos-titulo">Por que somos diferenciados?</h2>
+                <p id="somos-texto">Somos uma empresa de transporte executivo de alto padrão. Atendemos os principais hotéis de Porto
+                    Alegre
+                    como
+                    Hilton e Radisson. Somos a empresa de transporte fornecedora da Dell, SAP, Oracle, Mc kinsey, Évora,
+                    YARA,
+                    entre outros. Inglês e Espanhol</p>
+                <button id="saibaMaisBtn">Saiba mais!</button>
             </div>
-            <aside class="lua">
-                <div class="slide_lua">
-                    <img src="./img/lua.png" alt="logo da marca">
-                </div>
-            </aside>
 
         </section>
 
+        <section class=" parceiros">
 
-        <section class="servicos" id="servicos">
+            <div class="parceiro1 parceiro"><img  src="./img/art_hotel_novo.png" alt="logo  do hotel Art">
 
-            <h2>Serviços</h2>
-            <h3> Conteúdo estratégico e design impactante para fortalecer sua marca e atrair clientes</h3>
+                <p id="arthotel-texto">O Art Hotel Transamerica Collection é um hotel de padrão internacional localizado em uma região nobre
+                    de Porto Alegre, conhecida por suas belas paisagens e parques. O hotel oferece excelência no
+                    serviço, ótimo atendimento e conforto, com máximo estilo.
+                </p>
+            </div>
+
+            <div class="parceiro2 parceiro">
+                <img src="./img/logo Casa da Montanha_4.webp" alt="logo do hotel Casa da Montanha">
+                <p id="casa-da-montanha-texto">O Hotel Casa da Montanha é um dos mais tradicionais hotéis de Gramado, localizado a apenas 2
+                    quarteirões da Rua Coberta e do Palácio dos Festivais. Desde 1997, o hotel tem proporcionado uma
+                    experiência única na Serra Gaúcha.
+                </p>
+            </div>
+
+            <div class="parceiro3 parceiro">
+                <img src="./img/hilton-logo.png" alt="logo do hotel Hilton">
+                <p id="hilton-texto">O Hilton Porto Alegre é um hotel de padrão internacional localizado no bairro de Moinhos de Vento, a
+                    15 minutos de carro do Aeroporto Internacional Salgado Filho.
+                </p>
+            </div>
+
+            <div class="parceiro4 parceiro">
+                <img src="./img/DoubletreeLogo.svg.png" alt="logo do hotel DoubleTree by Hiltoj">
+                <p id="doubletree-texto">A DoubleTree by Hilton é uma marca de hotéis globalmente reconhecida, com mais de 580 hotéis e
+                    resorts espalhados pelo mundo. Conhecida por seu serviço caloroso e acolhedor.</p>
+
+            </div>
+
+            <div class="parceiro5 parceiro">
+                <img src="./img/logo_parkplaza_4.webp" alt="logo do hotel plaza">
+                <p id="parkplaza-texto">O Park Plaza Moinhos Porto Alegre é um hotel 3 estrelas localizado em Porto Alegre, a 5,5 km da Arena
+                    do Grêmio. </p>
+            </div>
+
+
+
+        </section>
+        <section class="frota">
+
+            <h3 id="frota-titulo">Frota DriveUp</h3>
             <div class="cards">
-                <div class="card">
-                    <h4>Branding</h4>
-                    <p>O trabalho perfeito para abrir as portas do paraíso de clientes apaixonados pela sua marca, da
-                        estratégia a execução para criar stakeholders. </p>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <h4 id="frota-executivo">Executivos</h4>
+
+                            <p id="opcao-blindados">Opções blindadas</p>
+
+                            <img src="./img/cruze.png" alt="Carro de luxo Cruza">
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h4>Identidades Visuais</h4>
-                    <p>Desenvolvemos da estratégia ao detalhe visual especial que sua marca precisa para se destacar no
-                        mercado e marcar as histórias de muitas pessoas.</p>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <h4 id="frota-suv">SUV</h4>
+
+                            <p class="hidden">dasda</p>
+
+                            <img src="./img/tiggo.png" alt="Carro de luxo Tiggo">
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h4>Performance</h4>
-                    <p>Trabalho 100% metrificado para atingir os KPI's determinados no início do trabalho. Da estratégia
-                        orgânica aos anúncios pagos, a performance será medida.</p>
-                </div>
-                <div class="card">
-                    <h4>Mídias Sociais</h4>
-                    <p>Especialistas em gestão, criação e produção de estratégias e conteúdos para as mais diversas
-                        mídias sociais, criando relevância e presença para a sua marca no digital.</p>
-                </div>
-                <div class="card">
-                    <h4>Desenvolvimento de sites</h4>
-                    <p>Técnicas avançadas de desenvolvimento de sites e páginas de capturas para aumentar ainda mais o
-                        poder do seu marketing digital, aliando à estratégias de inbound e e-mail marketing.</p>
-                </div>
-                <div class="card">
-                    <h4>Audiovisual</h4>
-                    <p>Além de conteúdos bem feitos e um visual bonito, produzir fotos e vídeos profissionais,
-                        estratégicos e com a qualidade acima da média, leva a comunicação da marca para outro nível.</p>
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <h4 id="frota-minivan">Minivan</h4>
+                            <p id="texto-minivan">Exclusivo Florida</p>
+                            <img src="./img/DriveUpIMG/minivan_eua.png" alt="Carro de luxo C180">
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
         </section>
-        <section class="equipe">
-
+        <section class="coments">
+            <h3>Comentários sobre nós</h3>
+            <div class="comentarios">
+                <div class="coments_container">
+                    <button id="nextButton"><i class="fa-solid fa-arrow-left"></i></button>
+                    <div class="coments_cards">
+                        <div class="img_estrelas">
+                            <img class="foto1" src="img/DriveUpIMG/foto_comentario1.png">
+                            <p class="nome_comentario">Maeve Ryan</p>
+                            <aside class="estrelas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </aside>
+                        </div>
+                        <div class="coments_text">
+                            <p>Tiago e sua equipe são um sonho de lidar. Profissionais, prestativos, sempre pontuais e facilitam muito a viagem por Porto Alegre.
+                                Eu não posso recomendar-los o suficiente!</p>
+                        </div>
+                    </div>
+                    <div class="coments_cards">
+                        <div class="img_estrelas">
+                            <img class="foto1" src="img/DriveUpIMG/foto_comentario2.png">
+                            <p class="nome_comentario">Ketie Alessio</p>
+                            <aside class="estrelas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </aside>
+                        </div>
+                        <div class="coments_text">
+                            <p>Excelente...Mateus  nos levou de POA a Caxias do Sul  com muitos bloqueios devido temporal e foi sempre  cuidadoso,  educado,  prestativo, enfim.so elegios para o serviço.. carro super confortável..parabéns  e gratidão</p>
+                        </div>
+                    </div>
+                    <div class="coments_cards">
+                        <div class="img_estrelas">
+                            <img class="foto1" src="img/DriveUpIMG/foto_comentario3.png">
+                            <p class="nome_comentario">Fernanda Moguinho</p>
+                            <aside class="estrelas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </aside>
+                        </div>
+                        <div class="coments_text">
+                            <p>Tivemos um dia maravilhoso conhecendo Canela e Gramado.  Gratidão </p>
+                        </div>
+                    </div>
+                    <div class="coments_cards">
+                        <div class="img_estrelas">
+                            <img class="foto1" src="img/DriveUpIMG/foto_comentario4.png">
+                            <p class="nome_comentario">Omar andres</p>
+                            <aside class="estrelas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </aside>
+                        </div>
+                        <div class="coments_text">
+                            <p>DriveUP me prestou um excelente serviço. Destaco a pontualidade, flexibilidade e gentileza dos motoristas.</p>
+                        </div>
+                    </div>
+                    <div class="coments_cards">
+                        <div class="img_estrelas">
+                            <img class="foto1" src="">
+                            <p class="nome_comentario">Francielle Santos</p>
+                            <aside class="estrelas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </aside>
+                        </div>
+                        <div class="coments_text">
+                            <p>Serviço de excelência. Motorista atencioso, super cuidadoso; carro novo, limpo, confortável. Quem nos atendeu foi o Gênesis - super querido. Recomendo demais a DriveUp!</p>
+                        </div>
+                    </div>
+                    <div class="coments_cards">
+                        <div class="img_estrelas">
+                            <img class="foto1" src="">
+                            <p class="nome_comentario">Martha Porto</p>
+                            <aside class="estrelas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </aside>
+                        </div>
+                        <div class="coments_text">
+                            <p>Excelente serviço de transporte executivo. Educação, pontualidade, cordialidade, comodidade e segurança garantidas. Usamos para assistir a um show na Arena do Grêmio, local de difícil acesso a táxis e Uber. Serviço excelente. Recomendamos, voltaremos a usar, até mesmo para outras finalidades. Agradecemos ao Tiago e sua equipe.</p>
+                        </div>
+                    </div>
+                    <div class="coments_cards">
+                        <div class="img_estrelas">
+                            <img class="foto1" src="">
+                            <p class="nome_comentario">MinYoung Kim</p>
+                            <aside class="estrelas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </aside>
+                        </div>
+                        <div class="coments_text">
+                            <p>A van era muito confortável e o motorista também foi muito gentil.
+                                Se tiver oportunidade de visitar Porto Alegre novamente, usarei novamente e recomendarei aos meus amigos.</p>
+                        </div>
+                    </div>
+                    <div class="coments_cards">
+                        <div class="img_estrelas">
+                            <img class="foto1" src="">
+                            <p class="nome_comentario">Brad Staley</p>
+                            <aside class="estrelas">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </aside>
+                        </div>
+                        <div class="coments_text">
+                            <p>Eu tive um guia/motorista incrível chamado Tioga. Ele foi muito simpático, fala inglês muito bem e conhece muito bem a história alemã e a logística da região. Recomendo a todos que façam seu tour por Gramado e Canela. Pude ver cachoeiras, muita arquitetura alemã, muitas cidades pequenas e parques urbanos e outras coisas. Conheci o rodezio durante um almoço tardio (toda a carne grelhada e italiana que você puder comer). Estava gostoso!😊 Também pude ver alguns quati! Um dia divertido com certeza!</p>
+                        </div>
+                    </div>
+                    <button id="prevButton"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-
-        <section class="duvidas" id="duvidas">
-            <div class="pergunta">
-                <h3>O que é a Midia Regener e qual é o seu foco?</h3>
-                <p>dkasmdkaskdkaskdaskkdsakdaskdkaskdsakdjasdjaskdjasdjskdjaskdjaskdaskdjask</p>
+    <footer class="main_footer">
+        <div class="footeer_content">
+            <div class="all_footer">
+                <div class="contat">
+                    <h1 id="endereco-titulo">Endereço</h1>
+                    <h3 id="endereco-texto">Rua: Olavo Barreto Viana, 18 - Moinhos de Vento</h3>
+                    <h3>CEP : 90570-070</h3>
+                </div>
+                <div class="contat">
+                    <h1 id="contato-titulo">Contato</h1>
+                    <h3 id="contato-texto">Fone: +55 (51) 9620-0409</h3>
+                    <h3 id="contato-texto2">Fone: +1 (689) 837-9863</h3>
+                    <h3>Contract@driveup.com.br</h3>
+                </div>
+                <div class="contat">
+                    <h1 id="siga-nos-titulo">Siga-nos</h1>
+                    <ul class="footer_lks">
+                        <a target="_blank" href="https://www.instagram.com/driveupexecutive/" class="footer_link"
+                            id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/driveupexecutive/" class="footer_link"
+                            id="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a target="_blank" href="https://bit.ly/47FHAut" class="footer_link" id="whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </ul>
+                </div>
             </div>
-            <div class="pergunta">
-                <h3>Como a Midia Regener se destaca em relação a outras agências de marketing?</h3>
-                <p>adsssssssss</p>
+            <div class="boximg">
+                <div class="imgfooter">
+                    <picture>
+                        <source srcset="img/DriveUp_Oficial150.webp" media="(max-width: 400px)" alt="Logo DriveUp"/>
+                        <img src="img/DriveUp_Oficial210.webp" alt="Logo DriveUp">
+                    </picture>
+                </div>
             </div>
-            <div class="pergunta">
-                <h3>Quais são os valores fundamentais da Midia Reneger?</h3>
-                <p>daaaaaaaaa</p>
-            </div>
-            <div class="pergunta">
-                <h3>Qual é a importância do branding para o sucesso de uma empresa?</h3>
-                <p>adddddddd</p>
-            </div>
-            <div class="pergunta">
-                <h3>Como a Midia Regener pode ajudar minha empresa a se destacar no mundo digital?</h3>
-                <p>daaaaaaa</p>
-            </div>
-        </section>
-        <img src="./img/footer.png" alt="">
-
-    </main>
-    <script src="script_cabecalho.js"></script>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="script_cabecalho_mobile.js"></script>
 </body>
+
 </html>
