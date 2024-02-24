@@ -22,6 +22,11 @@ body {
 
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Corrigir diferenças de margens e paddings em elementos padrão */
 h1, h2, h3, p {
     margin: 0;
@@ -78,7 +83,7 @@ section {
 .inicio h1 {
     color: #58EAD9;
     opacity: 1;
-    width: 60%;
+    width: 55%;
     font-size: 2em;
     text-align: center;
 }
@@ -91,6 +96,7 @@ section {
     width: 30%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    text-align: center;
 
 }
 
@@ -165,9 +171,13 @@ section {
 .textos button {
     margin-top: 8vh;
     background-color: rgba(88, 234, 217, 0);
-    border-radius: 20px;
+    border-radius: 25px;
     border-color: #33FFE6;
     padding: 1px 30px;
+    height: 7vh;
+    width: 100%;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 
 .textos img {
@@ -234,6 +244,7 @@ section {
 /* Serviços */
 .servicos {
     text-align: center;
+    height: auto;
 }
 
 .servicos h2 {
@@ -259,7 +270,16 @@ section {
     box-sizing: border-box;
     padding: 20px;
     margin: 10px;
-    padding-left: 100px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card p {
+    width: 90%;
+    margin-left: 7%;
+    }
+
+.card:hover {
+    box-shadow: 0 0 10px white;
 }
 
 .card h4 {
@@ -271,17 +291,33 @@ section {
     visibility: hidden;
 }
 
-/* Adaptação para telas menores */
-@media screen and (max-width: 768px) {
-    .card {
-        width: 100%;
+/* responsividade da seção .serviços para telas menores */
+@media screen and (max-width: 1270px) {
+    .cards {
+        width: 90%;
+        margin: auto;
     }
 }
 
-.equipe {
-    background: url(./img/fotomidiaregener.jpeg) center/cover;
-    height: 80vh;
+@Media screen and (max-width: 1130px) {
+    .card {
+        width: 47%;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
 
+    .card h4 {
+        text-align: center;
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .cards {
+        width: 100%;
+    }
 }

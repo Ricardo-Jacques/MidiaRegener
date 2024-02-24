@@ -46,7 +46,6 @@ a::after {
 
 a:hover::after {
     width: 70%;
-
 }
 
 .icone-menu {
@@ -111,8 +110,11 @@ a:hover::after {
 
     a.mobile {
         opacity: 1;
-        text-align: center;
+        padding: 0px 0px 5px 0px;
     }
 
+    a:hover::after {
+        width: 100%;
+    }
 
 }

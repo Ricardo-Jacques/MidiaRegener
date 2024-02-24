@@ -12,6 +12,7 @@ footer {
 .pergunta {
     width: 80%;
     margin: 0 auto;
+    border: 2px solid #ffffff;
     background-color: #000000;
     color: #ffffff;
     padding: 2vh;
@@ -27,6 +28,7 @@ footer {
 }
 
 .pergunta p {
+    margin-top: 2vh;
     visibility: hidden;
     display: none;
 }
