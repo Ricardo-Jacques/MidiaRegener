@@ -41,8 +41,8 @@
     list-style: none;
 }
 
-a {
-    text-decoration: none;
+a#linkwhatsapp::after {
+    content: none;
 }
 
 .divwhatsapp:hover {
